@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # LangGraph Dynamic MCP Agents
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue.svg)
@@ -57,3 +58,7 @@
 
 ## 설치 방법
 작성 예정
+=======
+# agentic_ai
+agentic_ai
+>>>>>>> a9c279fb1484da2a4e33c488b90affea1906e08f
