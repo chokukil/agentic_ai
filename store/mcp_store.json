@@ -1,0 +1,149 @@
+{
+  "mcpServers": {
+    "duckduckgo-mcp-server": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@nickclyde/duckduckgo-mcp-erver",
+        "--key",
+        "4b330216-bab6-4ad4-8a4f-c03b89d05eea"
+      ],
+      "transport": "stdio",
+      "description": "Enable web search capabilities through DuckDuckGo. Fetch and parse webpage content intelligently for enhanced LLM interaction.",
+      "EMP_NO": "2055186",
+      "EMP_NAME": "조국일"
+    },
+    "python-repl": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "C:\\MCP\\mcp-python-main",
+        "run",
+        "src\\mcp_python"
+      ],
+      "description": "This MCP server provides a Python REPL (Read-Eval-Print Loop) as a tool. It allows execution of Python code through the MCP protocol with a persistent session.",
+      "EMP_NO": "2055186",
+      "EMP_NAME": "조국일",
+      "transport": "stdio"
+    },
+    "mcp-taskmanager": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@kazuph/mcp-taskmanager",
+        "--key",
+        "4b330216-bab6-4ad4-8a4f-c03b89d05eea"
+      ],
+      "description": "Model Context Protocol server for Task Management, allowing Claude Desktop (or any MCP client) to manage and execute tasks in a queue-based system.",
+      "EMP_NO": "2055186",
+      "EMP_NAME": "조국일",
+      "transport": "stdio"
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\Users\\choku\\sandbox"
+      ],
+      "description": "Node.js server implementing Model Context Protocol (MCP) for filesystem operations.",
+      "EMP_NO": "2055186",
+      "EMP_NAME": "조국일",
+      "transport": "stdio"
+    },
+    "puppeteer": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-puppeteer"
+      ],
+      "description": "A Model Context Protocol server that provides browser automation capabilities using Puppeteer. This server enables LLMs to interact with web pages, take screenshots, and execute JavaScript in a real browser environment.",
+      "EMP_NO": "2055186",
+      "EMP_NAME": "조국일",
+      "transport": "stdio"
+    },
+    "playwright": {
+      "command": "npx",
+      "args": [
+        "@playwright/mcp@latest"
+      ],
+      "description": "A Model Context Protocol (MCP) server that provides browser automation capabilities using Playwright. This server enables LLMs to interact with web pages through structured accessibility snapshots, bypassing the need for screenshots or visually-tuned models.",
+      "EMP_NO": "2055186",
+      "EMP_NAME": "조국일",
+      "transport": "stdio"
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "description": "An MCP server implementation that provides a tool for dynamic and reflective problem-solving through a structured thinking process.",
+      "EMP_NO": "2055186",
+      "EMP_NAME": "조국일",
+      "transport": "stdio"
+    },
+    "sqlite": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "C:\\MCP\\sqlite\\src",
+        "run",
+        "mcp-server-sqlite",
+        "--db-path",
+        "C:\\Users\\choku\\sandbox\\sqlite.db"
+      ],
+      "description": "A Model Context Protocol (MCP) server implementation that provides database interaction and business intelligence capabilities through SQLite. This server enables running SQL queries, analyzing business data, and automatically generating business insight memos.",
+      "EMP_NO": "2055186",
+      "EMP_NAME": "조국일",
+      "transport": "stdio"
+    },
+    "mcp-server-ds": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "C:\\MCP\\mcp-python-main",
+        "run",
+        "src\\mcp-server-ds"
+      ],
+      "description": "MCP Server is a versatile tool designed for interactive data exploration. Your personal Data Scientist assistant, turning complex datasets into clear, actionable insights.",
+      "EMP_NO": "2055186",
+      "EMP_NAME": "조국일",
+      "transport": "stdio"
+    },
+    "python_local": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "C:\\MCP\\python_mcp-main",
+        "run",
+        "src\\python_local"
+      ],
+      "description": "An MCP Server that provides an interactive Python REPL (Read-Eval-Print Loop) environment.",
+      "EMP_NO": "2055186",
+      "EMP_NAME": "조국일",
+      "transport": "stdio"
+    },
+    "python-ast-repl": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "C:\\MCP\\mcp-python-ast",
+        "run",
+        "src\\server.py"
+      ],
+      "description": "This MCP server provides a safe Python AST REPL tool, enabling code execution via MCP with a persistent session.",
+      "EMP_NO": "2055186",
+      "EMP_NAME": "조국일",
+      "transport": "stdio"
+    }
+  }
+}

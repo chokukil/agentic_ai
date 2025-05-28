@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\Users\\choku\\sandbox"
+      ],
+      "description": "Node.js server implementing Model Context Protocol (MCP) for filesystem operations.",
+      "EMP_NO": "2055186",
+      "EMP_NAME": "조국일",
+      "transport": "stdio"
+    }
+  }
+}

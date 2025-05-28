@@ -1,0 +1,16 @@
+{
+  "server-sequential-thinking": {
+    "command": "cmd",
+    "args": [
+      "/c",
+      "npx",
+      "-y",
+      "@smithery/cli@latest",
+      "run",
+      "@smithery-ai/server-sequential-thinking",
+      "--key",
+      "4b330216-bab6-4ad4-8a4f-c03b89d05eea"
+    ],
+    "transport": "stdio"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "python-ast-repl": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "C:\\MCP\\mcp-python-ast",
+        "run",
+        "src\\server.py"
+      ],
+      "description": "This MCP server provides a safe Python AST REPL tool, enabling code execution via MCP with a persistent session.",
+      "EMP_NO": "2055186",
+      "EMP_NAME": "조국일",
+      "transport": "stdio"
+    }
+  }
+}

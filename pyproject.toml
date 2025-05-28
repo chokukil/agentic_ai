@@ -1,0 +1,83 @@
+[project]
+name = "AI_ON"
+version = "0.0.1"
+description = "AI ON Hub"
+authors = [
+    { name = "Gukil Jo", email = "gukil.jo@sk.com" },
+]
+readme = "README.md"
+license = { text = "Apache-2.0" }
+requires-python = ">=3.11,<4.0"
+dependencies = [
+    "streamlit==1.44.1",
+    "python-dotenv==1.1.0",
+    "nest-asyncio==1.6.0",
+    "numpy==2.2.5",
+    "pandas==2.2.3",
+    "scipy==1.15.3",
+    "seaborn==0.13.2",
+    "scikit-learn==1.6.1",
+    "matplotlib==3.10.1",
+    "pydantic==2.11.3",
+    "PyYAML==6.0.2",
+    "requests==2.32.3",
+    "mcp==1.6.0",
+    "langgraph==0.4.1",
+    "langgraph-checkpoint==2.0.25",
+    "langgraph-prebuilt==0.1.8",
+    "langgraph-sdk==0.1.63",
+    "langchain==0.3.25",
+    "langchain-community==0.3.24",
+    "langchain-core==0.3.61",
+    "langchain-experimental==0.3.4",
+    "langchain-text-splitters==0.3.8",
+    "langchain-openai==0.3.14",
+    "langchain-mcp-adapters==0.0.9",
+]
+
+
+[project.optional-dependencies]
+dev = ["mypy>=1.11.1", "ruff>=0.6.1"]
+
+[build-system]
+requires = ["setuptools>=73.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["langgraph.templates.react_agent", "react_agent"]
+[tool.setuptools.package-dir]
+"langgraph.templates.react_agent" = "src/react_agent"
+"react_agent" = "src/react_agent"
+
+
+[tool.setuptools.package-data]
+"*" = ["py.typed"]
+
+[tool.ruff]
+lint.select = [
+    "E",    # pycodestyle
+    "F",    # pyflakes
+    "I",    # isort
+    "D",    # pydocstyle
+    "D401", # First line should be in imperative mood
+    "T201",
+    "UP",
+]
+lint.ignore = [
+    "UP006",
+    "UP007",
+    # We actually do want to import from typing_extensions
+    "UP035",
+    # Relax the convention by _not_ requiring documentation for every function parameter.
+    "D417",
+    "E501",
+]
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["D", "UP"]
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[dependency-groups]
+dev = [
+    "langgraph-cli[inmem]>=0.1.89",
+]

@@ -1,0 +1,40 @@
+{
+  "mcpServers": {
+    "python-repl": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "C:\\MCP\\mcp-python-main",
+        "run",
+        "src\\mcp_python"
+      ],
+      "description": "This MCP server provides a Python REPL (Read-Eval-Print Loop) as a tool. It allows execution of Python code through the MCP protocol with a persistent session.",
+      "EMP_NO": "2055186",
+      "EMP_NAME": "조국일",
+      "transport": "stdio"
+    },
+    "filesystem": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "C:\\Users\\choku\\sandbox"
+      ],
+      "description": "Node.js server implementing Model Context Protocol (MCP) for filesystem operations.",
+      "EMP_NO": "2055186",
+      "EMP_NAME": "조국일",
+      "transport": "stdio"
+    },
+    "sequential-thinking": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@modelcontextprotocol/server-sequential-thinking"
+      ],
+      "description": "An MCP server implementation that provides a tool for dynamic and reflective problem-solving through a structured thinking process.",
+      "EMP_NO": "2055186",
+      "EMP_NAME": "조국일",
+      "transport": "stdio"
+    }
+  }
+}

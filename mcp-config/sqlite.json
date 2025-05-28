@@ -1,0 +1,19 @@
+{
+  "mcpServers": {
+    "sqlite": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "C:\\MCP\\sqlite\\src",
+        "run",
+        "mcp-server-sqlite",
+        "--db-path",
+        "C:\\Users\\choku\\sqlite.db"
+      ],
+      "description": "A Model Context Protocol (MCP) server implementation that provides database interaction and business intelligence capabilities through SQLite. This server enables running SQL queries, analyzing business data, and automatically generating business insight memos.",
+      "EMP_NO": "2055186",
+      "EMP_NAME": "조국일",
+      "transport": "stdio"
+    }
+  }
+}

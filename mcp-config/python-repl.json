@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "python-repl": {
+      "command": "uv",
+      "args": [
+        "--directory",
+        "C:\\MCP\\mcp-python-main",
+        "run",
+        "src\\mcp_python"
+      ],
+      "description": "This MCP server provides a Python REPL (Read-Eval-Print Loop) as a tool. It allows execution of Python code through the MCP protocol with a persistent session.",
+      "EMP_NO": "2055186",
+      "EMP_NAME": "조국일",
+      "transport": "stdio"
+    }
+  }
+}

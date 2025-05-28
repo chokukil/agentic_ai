@@ -1,0 +1,217 @@
+{
+  "AIAppStore": [
+    {
+      "type": "auto",
+      "apps": [
+        {
+          "prompt": "<ROLE>\nYou are a smart agent with an ability to use tools. \nYou will be given a question and you will use the tools to answer the question.\nPick the most relevant tool to answer the question. \nIf you are failed to answer the question, try different tools to get context.\nYour answer should be very polite and professional.\n</ROLE>\n\n----\n\n<INSTRUCTIONS>\nStep 1: Analyze the question\n- Analyze user's question and final goal.\n- If the user's question is consist of multiple sub-questions, split them into smaller sub-questions.\n\nStep 2: Pick the most relevant tool\n- Pick the most relevant tool to answer the question.\n- If you are failed to answer the question, try different tools to get context.\n\nStep 3: Answer the question\n- Answer the question in the same language as the question.\n- Your answer should be very polite and professional.\n\nStep 4: Provide the source of the answer(if applicable)\n- If you've used the tool, provide the source of the answer.\n- Valid sources are either a website(URL) or a document(PDF, etc).\n\nGuidelines:\n- If you've used the tool, your answer should be based on the tool's output(tool's output is more important than your own knowledge).\n- If you've used the tool, and the source is valid URL, provide the source(URL) of the answer.\n- Skip providing the source if the source is not URL.\n- Answer in the same language as the question.\n- Answer should be concise and to the point.\n- Avoid response your output with any other information than the answer and the source.  \n</INSTRUCTIONS>\n\n----\n\n<OUTPUT_FORMAT>\n(concise answer to the question)\n\n**Source**(if applicable)\n- (source1: valid URL)\n- (source2: valid URL)\n- ...\n</OUTPUT_FORMAT>",
+          "tools": {
+            "mcpServers": {
+              "python-repl": {
+                "command": "uv",
+                "args": [
+                  "--directory",
+                  "C:\\MCP\\mcp-python-main",
+                  "run",
+                  "src\\mcp_python"
+                ],
+                "description": "This MCP server provides a Python REPL (Read-Eval-Print Loop) as a tool. It allows execution of Python code through the MCP protocol with a persistent session.",
+                "EMP_NO": "2055186",
+                "EMP_NAME": "조국일",
+                "transport": "stdio"
+              },
+              "duckduckgo-mcp-server": {
+                "command": "cmd",
+                "args": [
+                  "/c",
+                  "npx",
+                  "-y",
+                  "@smithery/cli@latest",
+                  "run",
+                  "@nickclyde/duckduckgo-mcp-server",
+                  "--key",
+                  "4b330216-bab6-4ad4-8a4f-c03b89d05eea"
+                ],
+                "transport": "stdio",
+                "description": "Enable web search capabilities through DuckDuckGo. Fetch and parse webpage content intelligently for enhanced LLM interaction.",
+                "EMP_NO": "2055186",
+                "EMP_NAME": "조국일"
+              },
+              "server-sequential-thinking": {
+                "command": "cmd",
+                "args": [
+                  "/c",
+                  "npx",
+                  "-y",
+                  "@smithery/cli@latest",
+                  "run",
+                  "@smithery-ai/server-sequential-thinking",
+                  "--key",
+                  "4b330216-bab6-4ad4-8a4f-c03b89d05eea"
+                ],
+                "description": "An MCP server implementation that provides a tool for dynamic and reflective problem-solving through a structured thinking process."
+              }
+            }
+          },
+          "model": "gpt-4o",
+          "temperature": 0.1,
+          "title": "Search&Coding",
+          "icon_name": "",
+          "url": "http://localhost:2025/Agent?id=search-coding",
+          "hash_tag": [
+            "#CoT",
+            "#검색엔진",
+            "#Python"
+          ],
+          "like": 123,
+          "EMP_NO": "2055186",
+          "EMP_NAME": "조국일",
+          "description": "CoT 적용, 검색엔진 활용, Python 실행이 가능한 앱입니다."
+        },
+        {
+          "prompt": "<ROLE>\nYou are a smart agent with an ability to use tools. \nYou will be given a question and you will use the tools to answer the question.\nPick the most relevant tool to answer the question. \nIf you are failed to answer the question, try different tools to get context.\nYour answer should be very polite and professional.\n</ROLE>\n\n----\n\n<INSTRUCTIONS>\nStep 1: Analyze the question\n- Analyze user's question and final goal.\n- If the user's question is consist of multiple sub-questions, split them into smaller sub-questions.\n\nStep 2: Pick the most relevant tool\n- Pick the most relevant tool to answer the question.\n- If you are failed to answer the question, try different tools to get context.\n\nStep 3: Answer the question\n- Answer the question in the same language as the question.\n- Your answer should be very polite and professional.\n\nStep 4: Provide the source of the answer(if applicable)\n- If you've used the tool, provide the source of the answer.\n- Valid sources are either a website(URL) or a document(PDF, etc).\n\nGuidelines:\n- If you've used the tool, your answer should be based on the tool's output(tool's output is more important than your own knowledge).\n- If you've used the tool, and the source is valid URL, provide the source(URL) of the answer.\n- Skip providing the source if the source is not URL.\n- Answer in the same language as the question.\n- Answer should be concise and to the point.\n- Avoid response your output with any other information than the answer and the source.  \n</INSTRUCTIONS>\n\n----\n\n<OUTPUT_FORMAT>\n(concise answer to the question)\n\n**Source**(if applicable)\n- (source1: valid URL)\n- (source2: valid URL)\n- ...\n</OUTPUT_FORMAT>",
+          "tools": {
+            "mcpServers": {
+              "duckduckgo-mcp-server": {
+                "command": "cmd",
+                "args": [
+                  "/c",
+                  "npx",
+                  "-y",
+                  "@smithery/cli@latest",
+                  "run",
+                  "@nickclyde/duckduckgo-mcp-server",
+                  "--key",
+                  "4b330216-bab6-4ad4-8a4f-c03b89d05eea"
+                ],
+                "transport": "stdio",
+                "description": "Enable web search capabilities through DuckDuckGo. Fetch and parse webpage content intelligently for enhanced LLM interaction.",
+                "EMP_NO": "2055186",
+                "EMP_NAME": "조국일"
+              },
+              "server-sequential-thinking": {
+                "command": "cmd",
+                "args": [
+                  "/c",
+                  "npx",
+                  "-y",
+                  "@smithery/cli@latest",
+                  "run",
+                  "@smithery-ai/server-sequential-thinking",
+                  "--key",
+                  "4b330216-bab6-4ad4-8a4f-c03b89d05eea"
+                ],
+                "description": "An MCP server implementation that provides a tool for dynamic and reflective problem-solving through a structured thinking process."
+              }
+            }
+          },
+          "model": "gpt-4o",
+          "temperature": 0.1,
+          "title": "test33",
+          "icon_name": null,
+          "url": "http://localhost:2025/Agent?id=test33",
+          "hash_tag": [
+            "#test22",
+            "#test55"
+          ],
+          "like": 0,
+          "EMP_NO": "2055186",
+          "EMP_NAME": "조국일",
+          "description": "test33"
+        }
+      ]
+    },
+    {
+      "type": "user",
+      "apps": [
+        {
+          "title": "ChatGPT",
+          "icon_name": "icon_chatgpt.png",
+          "url": "https://chatgpt.com/",
+          "hash_tag": [
+            "#ChatGPT",
+            "#Chatbot"
+          ],
+          "like": 45,
+          "EMP_NO": "1000000",
+          "EMP_NAME": "OpenAI",
+          "description": "ChatGPT는 다양한 주제에 대해 대화할 수 있는 AI 챗봇입니다."
+        },
+        {
+          "title": "Search&Coding",
+          "description": "CoT 적용, 검색엔진 활용, Python 실행",
+          "EMP_NO": "2055186",
+          "EMP_NAME": "조국일",
+          "like": 0,
+          "icon_name": null,
+          "url": "",
+          "hash_tag": [
+            "CoT",
+            "검색엔진",
+            "Python"
+          ]
+        },
+        {
+          "title": "Test1",
+          "description": "Test111",
+          "EMP_NO": "2055186",
+          "EMP_NAME": "조국일",
+          "like": 0,
+          "icon_name": null,
+          "url": "http://localhost:2025/?agent=test1",
+          "hash_tag": [
+            "#test",
+            "#test2"
+          ],
+          "prompt": "",
+          "tools": ""
+        },
+        {
+          "title": "test3",
+          "description": "test33",
+          "EMP_NO": "2055186",
+          "EMP_NAME": "조국일",
+          "like": 0,
+          "icon_name": null,
+          "url": "http://localhost:2025/?agent=test33",
+          "hash_tag": [
+            "#test1",
+            "#test2"
+          ],
+          "prompt": "",
+          "tools": ""
+        },
+        {
+          "title": "test",
+          "description": "test",
+          "EMP_NO": "2055186",
+          "EMP_NAME": "조국일",
+          "like": 0,
+          "icon_name": null,
+          "url": "http://localhost:2025/?agent=test",
+          "hash_tag": [
+            "#test1",
+            "#test2"
+          ],
+          "prompt": "",
+          "tools": ""
+        },
+        {
+          "title": "test22",
+          "description": "test22",
+          "EMP_NO": "2055186",
+          "EMP_NAME": "조국일",
+          "like": 0,
+          "icon_name": null,
+          "url": "http://localhost:2025/?agent=test22",
+          "hash_tag": [
+            "#test1",
+            "#test2"
+          ],
+          "prompt": "",
+          "tools": ""
+        }
+      ]
+    }
+  ]
+}
